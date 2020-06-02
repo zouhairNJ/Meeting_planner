@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+ {% block title %} Rooms {% endblock %}
+{% block content %}
+<h1>Rooms Of Meeting :</h1>
+    <ul>
+        {% for x in rooms %}
+        <li>
+            <strong>{{x}}</strong>
+        </li>
+        {% endfor %}
+
+    </ul>
+
+<a href="{% url 'meetings:welcome'  %}">Home</a>
+{% endblock %}
+

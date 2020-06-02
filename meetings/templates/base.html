@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'meetings/css/style.css' %}">
+</head>
+<body>
+    <img src="{% static 'meetings/img/meeting.png' %}" alt="Logo" height="250px">
+        {% block content %}
+        {% endblock %}
+</body>
+</html>

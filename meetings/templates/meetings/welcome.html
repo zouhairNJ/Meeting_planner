@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome {% endblock%}
+
+{% block content %}
+<h1> Welcome to the Meeting WebSite !</h1>
+
+<h2>liste of Meetings</h2>
+         <ul>
+               {% for x in meetings %}
+                    <li>
+                          <a href="{% url 'meetings:detail'  x.id %}">
+                                  {{x.title}}
+                          </a>
+                     </li>
+               {% endfor %}
+         </ul>
+
+
+    <p>
+         <a href="{% url 'meetings:rooms'  %}">List of Rooms</a>
+    </p>
+    <p>
+        <a href="{% url 'meetings:new'  %}">add  new meeting</a>
+    </p>
+
+
+{% endblock%}
+
